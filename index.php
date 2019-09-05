@@ -1,54 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PHP Practice</title>
-    <style>
-        form div{ margin-bottom: 10px; }
-        .error { color: red; }
-    </style>
-</head>
-<body>
-    <div class="form-data">
-        <?php include "form_submit.php"; ?>
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
-            <div>
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name">
-                <p class="error"><?php echo $name_error; ?></p>
-            </div>
-            <div>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-                <p class="error"><?php echo $email_error; ?></p>
-            </div>
-            <div>
-                <label for="website">Website</label>
-                <input type="website" name="website" id="website">
-                <p class="error"><?php echo $website_error; ?></p>
-            </div>
-            <div>
-                <label for="comment">Comment</label>
-                <textarea name="comment" id="comment"></textarea>
-            </div>
-            <div>
-                <input type="file" name="fileToUpload" id="fileToUpload">
-            </div>
-            <div>
-                <button type="submit" name="submit">Submit</button>
-            </div>
-        </form>
+<?php
+
+    include "inc/header.php";
+
+    include "config/database.php";
+
+    try {
+        $query = $connection->prepare("SELECT *FROM employees ORDER BY id ASC");
+        $query->execute();
+        $query->setFetchMode(PDO::FETCH_ASSOC);
+        $data = $query->fetchAll();
+
+        // var_dump($data);
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+
+?>
+
+<div class="bottom-margin">
+    <a href="create.php"><button>Create Record</button></a>
+</div>
+
+<?php
+    
+if($data > 0):
+    
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        if(empty($_POST["name"]) && empty($_POST["email"]) && empty($_POST["website"])){
+            echo "<p class='error'>Please fill up the required field!</p>";
+        } else {
+            header("Location:index.php");
+        }
+    }
+
+?>
+
+    <div class="data-container">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Website</th>
+                <!-- <th>Image</th> -->
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+
+            <?php foreach($data as $data) : ?>    
+                <tr>
+                    <td><?php echo ucwords($data['name']); ?></td>
+                    <td><?php echo $data['email']; ?></td>
+                    <td><?php echo $data['website']; ?></td>
+                    <td><a href="edit.php?id=<?php echo $data['id']; ?>">Edit</a></td>
+                    <td><a href="delete.php?id=<?php echo $data['id']; ?>" onClick="return confirm('Are you sure you want to delete?')">Delete</a></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
     </div>
-    <div class="form-output">
-        <p>Name: <?php echo $name; ?></p>
-        <p>Email: <?php echo $email; ?></p>
-        <p>Comment: <?php echo $comment; ?></p>
-        <p>Website:
-            <a href="<?php echo $website; ?>" target="_blank">
-            <?php echo $website; ?></a>
-        </p>
-    </div>
-</body>
-</html>
+
+<?php
+
+else:
+    echo "<h2>There is no record!</h2>";
+endif;
+
+include "inc/footer.php";
+
+?>
