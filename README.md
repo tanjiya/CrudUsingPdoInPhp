@@ -9,6 +9,11 @@
 - Just go to your browser and write localhost!
 - And Yes, most importantly -- You have to installed Apache, PHP and MySQL on your computer :)
 
+<h2>Upload Image:</h2>
+
+- Need to create a folder name **uploads** in the clonned directory.
+- Folder heirarchy are given below.
+
 <h2>Folder hierarchy:</h2>
 
 --config
