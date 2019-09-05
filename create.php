@@ -40,6 +40,7 @@
             <textarea name="comment" id="comment"></textarea>
         </div>
         <div class="bottom-margin">
+            <label for="fileToUpload">Upload Image</label>
             <input type="file" name="fileToUpload" id="fileToUpload">
         </div>
         <div>
