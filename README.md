@@ -7,8 +7,7 @@
 - Create a Table named **employees**
 - You are done!
 - Just go to your browser and write localhost!
-- And Yes, mos importantly...
---You have to installed Apache, PHP and MySQL on your computer :)
+- And Yes, mos importantly -- You have to installed Apache, PHP and MySQL on your computer :)
 
 <h2>Folder hierarchy:</h2>
 
