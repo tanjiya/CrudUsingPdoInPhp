@@ -11,7 +11,7 @@
 
 <h2>Upload Image:</h2>
 
-- Need to create a folder name **uploads** in the clonned directory.
+- Need to create a folder name **uploads** in the clonned directory to get the upload file work.
 - Folder heirarchy are given below.
 
 <h2>Folder hierarchy:</h2>
