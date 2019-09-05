@@ -1,6 +1,6 @@
 ﻿# CRUD using PDO in PHP
  
-Folder hierarchy:
+#Folder hierarchy:
 
   --config
     --database.php
