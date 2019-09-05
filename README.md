@@ -15,7 +15,7 @@
 - Need to create a folder name **uploads** in the clonned directory to get the upload file work.
 - Folder heirarchy are given below.
 
-<h2>Table queries for employees:</h2>
+<h2>`employees` table queries:</h2>
 
 - CREATE TABLE employees (
 - id INT(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
