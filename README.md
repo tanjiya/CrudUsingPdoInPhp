@@ -16,7 +16,11 @@
 - record_update.php
 
 --uploads (Store the uploaded image)
+
 --create.php
+
 --delete.php
+
 --edit.php
+
 --index.php
