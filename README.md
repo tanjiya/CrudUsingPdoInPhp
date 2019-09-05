@@ -2,7 +2,7 @@
  
 #Folder hierarchy:
 
-config
+--config
 - database.php
 
 css
