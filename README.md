@@ -1,5 +1,13 @@
 ﻿# CRUD using PDO in PHP
  
+<h2>User Manual:</h2>
+  
+- Need to download or clone the project
+- Create a Database named **crud_pdo_in_php**
+- Create a Table named **employees**
+- You are done!
+- Just go to your browser and write localhost!  
+
 <h2>Folder hierarchy:</h2>
 
 --config
@@ -24,12 +32,3 @@
 --edit.php
 
 --index.php
-
-
-<h2>User Manual:</h2>
-  
-- Need to download or clone the project
-- Create a Database named **crud_pdo_in_php**
-- Create a Table named **employees**
-- You are done!
-- Just go to your browser and write localhost!  
