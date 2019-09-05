@@ -39,9 +39,9 @@
             <label for="comment">Comment</label>
             <textarea name="comment" id="comment"></textarea>
         </div>
-        <!-- <div class="bottom-margin">
+        <div class="bottom-margin">
             <input type="file" name="fileToUpload" id="fileToUpload">
-        </div> -->
+        </div>
         <div>
             <button type="submit" name="submit">Submit</button>
         </div>
