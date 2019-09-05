@@ -1,4 +1,4 @@
-﻿# crud_using_pdo_in_php
+﻿# CRUD using PDO in PHP
  
  #index.php - Shows all data
  
