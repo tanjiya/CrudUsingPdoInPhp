@@ -3,12 +3,16 @@
 Folder hierarchy:
 
   --config
+    
     --database.php
     
+    
   --css
+    
     --style.css
     
   --inc
+    
     --footer.php
     --header.php
     --image_upload.php
