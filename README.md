@@ -1,6 +1,7 @@
 ﻿# CRUD with file upload using PDO in PHP
  
- <h2>Repository Details:</h2>
+<h2>Repository Details:</h2>
+
 - Read, Insert, Update, Delete Record
 - Upload Image
 - Store the image path in database
