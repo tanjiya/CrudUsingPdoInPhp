@@ -1,4 +1,4 @@
-﻿# CRUD using PDO in PHP
+﻿# CRUD with file upload using PDO in PHP
  
  <h2>Repository Details:</h2>
 - Read, Insert, Update, Delete Record
