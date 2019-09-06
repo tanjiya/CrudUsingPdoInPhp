@@ -6,7 +6,8 @@
 - Create a Database named **crud_pdo_in_php**
 - Create a Table named **employees**
 - Table Queries are given below
-- You are done!
+- Need to put the mySQL user name and password in config/database.php file
+- And you are done!
 - Just go to your browser and write localhost!
 - And Yes, most importantly -- You have to installed Apache, PHP and MySQL on your computer :)
 
