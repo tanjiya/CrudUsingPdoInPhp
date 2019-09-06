@@ -9,7 +9,7 @@
     include "inc/record_update.php";
     
     try {
-        $db_query = "SELECT id, name, email, website, comment FROM employees WHERE id = '$id' LIMIT 0,1";
+        $db_query = "SELECT id, name, email, website, comment, image_path FROM employees WHERE id = '$id' LIMIT 0,1";
 
         $query = $connection->prepare($db_query);
         $query->bindParam(':id', $id);
@@ -45,9 +45,12 @@
             <label for="comment">Comment</label>
             <textarea name="comment" id="comment" value="<?php echo $data['comment']; ?>"></textarea>
         </div>
-        <!-- <div class="bottom-margin">
+        <div class="bottom-margin">
+            <img src="<?php echo $data['image_path']?>" alt="" class="index-image">
+        </div>
+        <div class="bottom-margin">
             <input type="file" name="fileToUpload" id="fileToUpload">
-        </div> -->
+        </div>
         <div>
             <button type="submit" name="update">Update</button>
             <a href="index.php"><button>Back to Record</button></a>
