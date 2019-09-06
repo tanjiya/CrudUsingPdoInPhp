@@ -41,7 +41,7 @@ if($data > 0):
                 <th>Name</th>
                 <th>Email</th>
                 <th>Website</th>
-                <!-- <th>Image</th> -->
+                <th>Image</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -51,8 +51,15 @@ if($data > 0):
                     <td><?php echo ucwords($data['name']); ?></td>
                     <td><?php echo $data['email']; ?></td>
                     <td><?php echo $data['website']; ?></td>
-                    <td><a href="edit.php?id=<?php echo $data['id']; ?>">Edit</a></td>
-                    <td><a href="delete.php?id=<?php echo $data['id']; ?>" onClick="return confirm('Are you sure you want to delete?')">Delete</a></td>
+                    <td>
+                        <img src="<?php echo $data['image_path']; ?>" alt="" class="index-image">
+                    </td>
+                    <td>
+                        <a href="edit.php?id=<?php echo $data['id']; ?>">Edit</a>
+                    </td>
+                    <td>
+                        <a href="delete.php?id=<?php echo $data['id']; ?>" onClick="return confirm('Are you sure you want to delete?')">Delete</a>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </table>
