@@ -7,6 +7,7 @@ $name = $email = $comment = $website = $fileToUpload = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     try {
+        //Function to filter the form input
         function user_input( $data ) {
             $data1 = trim($data);
             $data2 = stripslashes($data1);
@@ -50,9 +51,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $comment = user_input($_POST["comment"]);
         }
         
-        //include "inc/image_upload.php";
+        include "inc/image_upload.php";
 
-        // Query for Insertion
+        // Query for Insert Record
         $db_query = "INSERT INTO employees(
                                     name,
                                     email,
