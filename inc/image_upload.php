@@ -13,7 +13,7 @@ $target_file    = $target_dir . basename($file_name);
 $upload_ok      = 1;
 $img_file_type  = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-//===========Check if image is an actual image or fake image=========
+//Check if image is an actual image or fake image
 $check_img = getimagesize($temp_file_name);
 if($check_img !== false) {
     echo "File is an image - " . $check_img["mime"];
