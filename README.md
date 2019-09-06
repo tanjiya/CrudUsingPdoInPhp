@@ -1,5 +1,10 @@
 ﻿# CRUD using PDO in PHP
  
+ <h2>Repository Details:</h2>
+- Read, Insert, Update, Delete Record
+- Upload Image
+- Store the image path in database
+ 
 <h2>User Manual:</h2>
   
 - Need to download or clone the project
@@ -46,10 +51,10 @@
 
 --uploads (Store the uploaded image)
 
---create.php
+--create.php (Create Record)
 
---delete.php
+--delete.php (Delete Record)
 
---edit.php
+--edit.php (Edit Record)
 
---index.php
+--index.php (Read Record)
